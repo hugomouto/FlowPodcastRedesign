@@ -22,6 +22,17 @@ body * {
   box-shadow: -15px -15px 56px rgba(52, 84, 109, 0.7), 23px 32px 69px rgba(4, 16, 24, 0.7);
   border-radius: 15px;
   margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.episode-card h2 {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 115.6%;
+  text-transform: uppercase;
+  color: #1E394E;
 }
 
 .episode-card__img {
@@ -31,3 +42,11 @@ body * {
   outline: 4px solid #F7F7FC;
   outline-offset: -7px;
 }
+
+/* .episode-card__img::after {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: block;
+  z-index: 10;
+} */
