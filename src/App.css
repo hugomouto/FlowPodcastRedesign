@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+body {
+  background-color: #1E394E;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body * {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* -- GENERAL -- */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* -- EPISODE-CARD --  */
+
+.episode-card {
+  box-sizing: border-box;
+  max-width: 320px;
+  border-radius: 15px;
+  background: #F7F7FC;
+  box-shadow: -15px -15px 56px rgba(52, 84, 109, 0.7), 23px 32px 69px rgba(4, 16, 24, 0.7);
+  border-radius: 15px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.episode-card__img {
+  padding: 2px;
+  border-radius: 30px;
+  width: 100%;
+  outline: 4px solid #F7F7FC;
+  outline-offset: -7px;
 }

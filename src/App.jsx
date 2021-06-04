@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import EpisodeCard from './EpisodeCard';
+import './App.css'
 
 export default class App extends Component {
   constructor () {
