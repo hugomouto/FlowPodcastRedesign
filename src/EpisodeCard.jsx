@@ -68,22 +68,22 @@ export default class EpisodeCard extends Component {
       <div>
         {podcastData.episodes.map((episode) => {
           return (
-            <div className="episode-card" key={episode.id}>
+            <div className="episode-card flex-column" key={episode.id}>
               <img className='episode-card__img' alt='thumbnail' src={episode.cover}/>
               <div className='episode__info flex-column'>
-                <div className='flex-row'>
-                  <p>{this.convertDate(episode.created_at)}</p>
-                  <p> &nbsp;•&nbsp;</p>
-                  <p>{this.convertDuration(episode.duration)}</p>
+                <div className='flex-row episode__time-info'>
+                  <p className='is--overline'>{this.convertDuration(episode.duration)}</p>
+                  <p className='is--overline'> &nbsp;•&nbsp;</p>
+                  <p className='is--overline'>{this.convertDate(episode.created_at)}</p>
                 </div>
                 <h2>{episode.title.split(" - ")[0]}</h2> {/*Split method added to remove extra text from title*/}
                 <h3>{episode.description}</h3>
-                <button>COMENTAR</button>
                 <p className='episode__number'>
                   { episode.title.slice(episode.title.indexOf('#')+1)} {/*Extra method added ti slice episode # out of text*/}
                 </p>
+                 <a className='episode__comment-btn'>COMENTAR</a>
+                <button className='episode__play-btn'>&#9654;</button>
               </div>
-              <button className='episode__play-btn'></button>
             </div>
           )
         })}
