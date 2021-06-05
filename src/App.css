@@ -9,10 +9,7 @@ body * {
   padding: 0;
 }
 
-div {}
-
 /* -- GENERAL -- */
-
 .flex-row {
   display: flex;
   flex-direction: row!important;
@@ -29,20 +26,35 @@ font-size: 10px;
 line-height: 24px;
 letter-spacing: 1px;
 text-transform: uppercase;
-color: #1E394E;
+color: #A0A3BD;
+}
+
+/* -- EPISODE-LIST --  */
+.episodes-list {
+  display: flex;
+  width: 90%;
+  max-width: 3000px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.filling-empty-space-childs {
+  width:370px; /*the width of the images in this example*/
+  height:0; /*Important! for the divs to collapse should they fall in a new row*/
+  margin: 0 30px;
 }
 
 /* -- EPISODE-CARD --  */
-
 .episode-card {
   box-sizing: border-box;
-  max-width: 370px;
+  width: 370px;
   border-radius: 15px;
   background: #F7F7FC;
-  box-shadow: -15px -15px 56px rgba(52, 84, 109, 0.7), 23px 32px 69px rgba(4, 16, 24, 0.7);
+  position: relative;
   border-radius: 15px;
-  margin-bottom: 10px;
   height: 560px;
+  margin: 30px 30px;
+  box-shadow: -15px -15px 56px rgba(52, 84, 109, 0.7), 23px 32px 69px rgba(4, 16, 24, 0.7);
   overflow: hidden;
 }
 

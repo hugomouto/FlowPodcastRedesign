@@ -19,7 +19,7 @@ export default class App extends Component {
     const myObject = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({"params":{"filter":"episodes","paging":{"previous":null,"next":"2021-05-18T17:00:00-03:00"}}}),
+      body: JSON.stringify({"params":{"filter":"episodes"}}),
     };
 
     const response = await fetch(API_URL, myObject);
@@ -37,6 +37,9 @@ export default class App extends Component {
     return (
       <div className='episodes-list'>
         {this.state.fetchDone && <EpisodeCard podcastData={ podcastData }/>}
+        <div className="filling-empty-space-childs"></div>
+        <div className="filling-empty-space-childs"></div>
+        <div className="filling-empty-space-childs"></div>
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class EpisodeCard extends Component {
 
-  convertDate(date){ {/*Change date format from YYYY:MM:DD to 'Day of Month of Year'*/}
+  convertDate(date){ /*Change date format from YYYY:MM:DD to 'Day of Month of Year'*/
     const dateArray = (date.split("T")[0]).split("-")
     switch (dateArray[1]) {
       case `01`:
@@ -44,15 +44,13 @@ export default class EpisodeCard extends Component {
       default:
         break;
     }
-    return `${dateArray[2]} de ${dateArray[1]} de ${dateArray[0]}`
+    return `${parseInt(dateArray[2])} de ${dateArray[1]} de ${dateArray[0]}`
   }
 
-  convertDuration(duration) { {/*Change duration format from HH:MM:SS to 'HH hours and MM minutes'*/}
-    const durationArray = duration.split(":");
+  convertDuration(duration) { /*Change duration format from HH:MM:SS to 'HH hours and MM minutes'*/
+    const durationArray = duration.split(":").map( item => parseInt(item));
     let pluralHour = ''
     let pluralMinute = ''
-    durationArray[0] = parseInt(durationArray[0]);
-    durationArray[1] = parseInt(durationArray[1]);
     if (durationArray[0] > 1) {
       pluralHour = 's'
     }
@@ -65,16 +63,18 @@ export default class EpisodeCard extends Component {
   render() {
     const {podcastData} = this.props
     return (
-      <div>
+      <>
         {podcastData.episodes.map((episode) => {
           return (
             <div className="episode-card flex-column" key={episode.id}>
               <img className='episode-card__img' alt='thumbnail' src={episode.cover}/>
               <div className='episode__info flex-column'>
                 <div className='flex-row episode__time-info'>
-                  <p className='is--overline'>{this.convertDuration(episode.duration)}</p>
-                  <p className='is--overline'> &nbsp;•&nbsp;</p>
-                  <p className='is--overline'>{this.convertDate(episode.created_at)}</p>
+                  <p className='is--overline'>
+                    {this.convertDuration(episode.duration)}
+                    &nbsp;•&nbsp;
+                    {this.convertDate(episode.created_at)}
+                  </p>
                 </div>
                 <h2>{episode.title.split(" - ")[0]}</h2> {/*Split method added to remove extra text from title*/}
                 <h3>{episode.description}</h3>
@@ -87,7 +87,7 @@ export default class EpisodeCard extends Component {
             </div>
           )
         })}
-      </div>
+      </>
     )
   }
 }
