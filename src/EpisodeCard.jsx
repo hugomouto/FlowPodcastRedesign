@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import LinksContainer from './LinksContainer.jsx'
 
 export default class EpisodeCard extends Component {
 
@@ -83,6 +84,7 @@ export default class EpisodeCard extends Component {
                 </p>
                  <a className='episode__comment-btn'>COMENTAR</a>
                 <button className='episode__play-btn'>&#9654;</button>
+                <LinksContainer />
               </div>
             </div>
           )
