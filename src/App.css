@@ -10,6 +10,11 @@ body * {
 }
 
 /* -- GENERAL -- */
+
+ol{
+  list-style: none;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row!important;
@@ -145,10 +150,10 @@ color: #A0A3BD;
   filter: drop-shadow(5px 5px 13px rgba(133, 89, 74, 0.4));
   border-radius: 100%;
   border: none;
+  cursor: pointer;
 }
 
 /* -- LINKS CONTAINER -- */
-
 .links-container {
   width: 100%;
   height: 100%;
@@ -174,6 +179,7 @@ color: #A0A3BD;
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .btn-gradient {

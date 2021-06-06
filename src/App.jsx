@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import EpisodeCard from './EpisodeCard';
+import EpisodesList from './EpisodesList';
 import './App.css'
 
 export default class App extends Component {
@@ -35,12 +35,8 @@ export default class App extends Component {
     const { podcastData } = this.state
     console.log(podcastData.episodes)
     return (
-      <div className='episodes-list'>
-        {this.state.fetchDone && <EpisodeCard podcastData={ podcastData }/>}
-        <div className="filling-empty-space-childs"></div>
-        <div className="filling-empty-space-childs"></div>
-        <div className="filling-empty-space-childs"></div>
-        <div className="filling-empty-space-childs"></div>
+      <div>
+        {this.state.fetchDone && <EpisodesList podcastData={ podcastData }/>}
       </div>
     )
   }
