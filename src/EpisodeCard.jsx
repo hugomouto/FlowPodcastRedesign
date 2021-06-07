@@ -81,6 +81,13 @@ export default class EpisodeCard extends Component {
     this.setState({
       shownLinks: false,
     })
+  
+  }
+
+  wipFunction(e) {
+    e.preventDefault()
+    alert(`Obrigado pro testar o MVP.
+Essa funcionalidade ainda está em desenvolvimento.`)
   }
 
   render() {
@@ -101,13 +108,18 @@ export default class EpisodeCard extends Component {
           <p className='episode__number'>
             { episode.title.slice(episode.title.indexOf('#')+1)} {/*Extra method added to slice episode # out of text*/}
           </p>
-           <a className='episode__comment-btn text-btn'>COMENTAR</a>
+           <a className='episode__comment-btn text-btn' onClick={this.wipFunction}>COMENTAR</a>
           <button 
             className='episode__play-btn btn-float--hover'
             onClick={this.displayLinks}>
               &#9654;
           </button>
-          {this.state.shownLinks && <LinksContainer episodeFeed={episode.feed} onMouseLeave={this.hideLinks} />}
+          {this.state.shownLinks && <LinksContainer 
+                                        episodeFeed={episode.feed} 
+                                        mp3={episode.mp3} 
+                                        onMouseLeave={this.hideLinks} 
+                                        wipFunction={this.wipFunction}
+                                    />}
         </div>
       </li>
     )

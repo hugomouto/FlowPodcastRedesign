@@ -9,11 +9,21 @@ export default class LinksContainer extends Component {
     this.youtubeLink = this.youtubeLink.bind(this)
 }
 youtubeLink(link) {
-  return `'https://www.youtube.com/watch?v='`
+  return `https://www.youtube.com/watch?v=${link}`
 }
 
+linkHandler(link, callback) {
+  if (callback) {
+    return window.location.href(callback(link))
+  } else {
+    return window.location.href=link;
+  }
+}
+
+
+
 render() {
-  const { onMouseLeave, episodeFeed } = this.props
+  const { onMouseLeave, episodeFeed, mp3, wipFunction } = this.props
   
   return (
       <div className='links-container' onMouseLeave={onMouseLeave}>
@@ -21,9 +31,11 @@ render() {
           className="btn-class btn-float--hover btn-gradient">
             <img className='link__youtube' src={youtubeImage} alt="" /> youtube
         </a>
-        <a href="" className="btn-class btn-float--hover btn-gradient"><img className='link__spotify' src={spotifyImage} alt="" />spotify</a>
-        <a href='' className="btn-class btn-float--hover btn-gradient"><img className='link__download' src={downloadImage} alt="" />baixar</a>
-        <a href="" className="btn-class text-btn">ver mais</a>
+        <a href={episodeFeed.spotify} target='_blank' className="btn-class btn-float--hover btn-gradient">
+          <img className='link__spotify' src={spotifyImage} alt="" />spotify
+        </a>
+        <a href={mp3} target='_blank' className="btn-class btn-float--hover btn-gradient"><img className='link__download' src={downloadImage} alt="" />baixar</a>
+        <a onClick={wipFunction} className="btn-class text-btn">ver mais</a>
       </div>
     )
   }
