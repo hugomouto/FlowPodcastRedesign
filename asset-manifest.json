@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/FlowPodcastRedesign/static/css/main.03a200db.chunk.css",
+    "main.js": "/FlowPodcastRedesign/static/js/main.85818c66.chunk.js",
+    "main.js.map": "/FlowPodcastRedesign/static/js/main.85818c66.chunk.js.map",
+    "runtime-main.js": "/FlowPodcastRedesign/static/js/runtime-main.850320b2.js",
+    "runtime-main.js.map": "/FlowPodcastRedesign/static/js/runtime-main.850320b2.js.map",
+    "static/js/2.89a89aed.chunk.js": "/FlowPodcastRedesign/static/js/2.89a89aed.chunk.js",
+    "static/js/2.89a89aed.chunk.js.map": "/FlowPodcastRedesign/static/js/2.89a89aed.chunk.js.map",
+    "static/js/3.5a8e6a61.chunk.js": "/FlowPodcastRedesign/static/js/3.5a8e6a61.chunk.js",
+    "static/js/3.5a8e6a61.chunk.js.map": "/FlowPodcastRedesign/static/js/3.5a8e6a61.chunk.js.map",
+    "index.html": "/FlowPodcastRedesign/index.html",
+    "static/css/main.03a200db.chunk.css.map": "/FlowPodcastRedesign/static/css/main.03a200db.chunk.css.map",
+    "static/js/2.89a89aed.chunk.js.LICENSE.txt": "/FlowPodcastRedesign/static/js/2.89a89aed.chunk.js.LICENSE.txt",
+    "static/media/download.f88299f6.svg": "/FlowPodcastRedesign/static/media/download.f88299f6.svg",
+    "static/media/spotify.d5fd0805.svg": "/FlowPodcastRedesign/static/media/spotify.d5fd0805.svg",
+    "static/media/youtube.d848eaf3.svg": "/FlowPodcastRedesign/static/media/youtube.d848eaf3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.850320b2.js",
+    "static/js/2.89a89aed.chunk.js",
+    "static/css/main.03a200db.chunk.css",
+    "static/js/main.85818c66.chunk.js"
+  ]
+}
