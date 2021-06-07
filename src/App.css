@@ -55,6 +55,7 @@ color: #A0A3BD;
   width:370px; /*the width of the images in this example*/
   height:0; /*Important! for the divs to collapse should they fall in a new row*/
   margin: 0 30px;
+  position: relative;
 }
 
 /* -- EPISODE-CARD --  */
@@ -252,4 +253,18 @@ color: #A0A3BD;
 
 .text-btn:active {
   filter: brightness(90%);
+}
+
+/* ---- */
+
+.load-more {
+  align-self: center!important;
+  justify-self: center!important;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 300px;
+}
+
+.load-more:hover {
+  box-shadow: 0px 0px 0px;
 }
