@@ -33,7 +33,6 @@ export default class App extends Component {
   }
   render() {  
     const { podcastData } = this.state
-    console.log(podcastData.episodes)
     return (
       <div>
         {this.state.fetchDone && <EpisodesList podcastData={ podcastData }/>}
